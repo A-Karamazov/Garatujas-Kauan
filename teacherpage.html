@@ -1,1 +1,157 @@
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body>* {
+            border: 2px solid red;
+        }
+
+        :root {
+            --grid-info-size: 350px;
+            --color-bg-hi: rgb(0, 162, 255);
+        }
+
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: auto var(--grid-info-size) 1fr;
+            grid-template-rows: 1fr 120px;
+            grid-template-areas:
+                "social info content"
+                "footer footer footer";
+            min-height: 100svh;
+            gap: 0.5rem;
+            padding: .5rem;
+        }
+
+        aside {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            grid-area: info;
+
+            .thumb {
+                width: calc(var(--grid-info-size) - 20px);
+                height: calc(var(--grid-info-size) - 20px);
+                border-radius: 50%;
+                flex: none;
+                z-index: 2;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            section {
+                background-color: var(--color-bg-hi);
+                width: 100%;
+                height: 100%;
+                margin-top: -5rem;
+                padding: 5rem;
+                z-index: 1;
+                clip-path: polygon(0 20px, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        main {
+            grid-area: content;
+            position: relative;
+            isolation: isolate;
+            padding: 1rem;
+
+            img {
+                border-radius: 2%;
+                height: 600px;
+            }
+
+            &::before {
+                content: "";
+                background-color: var(--color-bg-hi);
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                clip-path: polygon(0 calc(var(--grid-info-size) * .71), 100% calc(var(--grid-info-size) * 0.2), 100% 100%, 0 100%);
+            }
+        }
+
+        .social {
+            grid-area: social;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: .5rem;
+            padding: 3px;
+
+            img {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgb(255, 230, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <div class="thumb"><img src="https://preview.redd.it/o-que-significa-o-meme-do-george-russell-como-osama-bin-v0-s7j7g0tpsf8g1.jpeg?auto=webp&s=5e7ece64e26301df85041e0ab3926f0ac45a74d2" alt=""></div>
+        <section>Osama Bin Russell (Merqaedes)</section>
+    </aside>
+
+    <main>
+        <article>
+            <h1>Title</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos blanditiis reiciendis doloribus itaque
+                earum hic assumenda
+                voluptatetemporibus animi obcaecati inventore possimus tempora fugit atque corporis, quam iure ad
+                laudantium!
+            </p>
+        </article>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Daniel_in_the_Lions%27_Den%2C_by_Briton_Rivi%C3%A8re.jpg"
+                alt="img 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm4kz5XOSfwbomnfUDV21TTY2bupzirj_UIg&s"
+                alt="img 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwg44fTPzkuOVlyvsjkQJC1j4RE9rWY1RJTg&s"
+                alt="img 3">
+        </div>
+    </main>
+
+    <div class="social">
+        <a href="https://facebook.com">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://instagram.com">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://x.com">
+            <img src="x_twitter.png" alt="X">
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kauan. All rights reserved</p>
+    </footer>
+</body>
+
+</html>
