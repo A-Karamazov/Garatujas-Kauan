@@ -48,3 +48,19 @@ acesso apenas por meios controlados. Isso aumenta a segurança e evita alteraç�
 
 Polimorfismo é a capacidade de um mesmo método ter diferentes comportamentos dependendo do 
 objeto que o utiliza. Esse conceito torna o código mais flexível e adaptável.
+
+
+
+Dúvidas
+
+Se o encapsulamento já protege os atributos com private, em quais situações é realmente
+necessário usar getters e setters em vez de acessar direto dentro da própria classe?
+
+Se cada objeto de uma mesma classe pode ter valores diferentes, como isso 
+ajuda na organização e reutilização do código em um sistema maior?
+
+Qual problema pode acontecer se não utilizarmos um construtor para 
+inicializar os atributos de um objeto logo na criação?
+
+Por que a programação orientada a objetos é considerada mais fácil de manter 
+e organizar do que a programação estruturada em projetos grandes?
