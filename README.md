@@ -46,8 +46,5 @@ Isso facilita o reaproveitamento de código e a organização do sistema.
 Encapsulamento é o princípio de proteger os dados internos de um objeto, permitindo 
 acesso apenas por meios controlados. Isso aumenta a segurança e evita alterações indevidas.
 
-Polimorfismo é a capacidade de um mesmo método ter diferentes comportamentos dependendo do objeto que o utiliza. Esse conceito torna o código mais flexível e adaptável.
-Herança: 
-
-
-Polimorfismo:
+Polimorfismo é a capacidade de um mesmo método ter diferentes comportamentos dependendo do 
+objeto que o utiliza. Esse conceito torna o código mais flexível e adaptável.
